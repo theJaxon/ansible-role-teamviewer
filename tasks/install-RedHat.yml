@@ -1,13 +1,19 @@
-- name: Add Teamviewer repo 
-  copy:
-    src: teamviewer.repo
-    dest: "{{ teamviewer_repo_dest }}"
-
-- name: Add signing key 
+---
+- name: Add the TeamViewer signing key 
   rpm_key:
     key: "{{ teamviewer_key }}"
 
-- name: Install Teamviewer
+- name: Add the TeamViewer repository 
+  yum_repository:
+    name: teamviewer 
+    description: Teamviewer repository
+    baseurl: "{{ teamviewer_baseurl }}" 
+    gpgcheck: True 
+    gpgkey: "{{ teamviewer_key }}"
+    repo_gpgcheck: True  
+    failovermethod: priority
+
+- name: Install TeamViewer
   dnf:
     name: teamviewer
-    state: latest 
+    state: latest

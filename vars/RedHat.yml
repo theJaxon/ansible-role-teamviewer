@@ -1,1 +1,3 @@
-teamviewer_repo_dest: /etc/yum.repos.d/teamviewer.repo
+---
+teamviewer_baseurl: https://linux.teamviewer.com/yum/stable/main/binary-$basearch/
+teamviewer_key: https://linux.teamviewer.com/pubkey/currentkey.asc
