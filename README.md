@@ -1,6 +1,10 @@
 Ansible Role: Teamviewer 
 =========
 
+![Ansible-Role](https://img.shields.io/badge/role-TEAMVIEWER-0E8EE9?style=for-the-badge&logo=ansible)
+![TeamViewer](https://img.shields.io/badge/-TeamViewer-0E8EE9?style=for-the-badge&logo=TeamViewer&logoColor=white)
+
+
 Install Teamviewer on multiple platforms.
 
 Supported platforms:
